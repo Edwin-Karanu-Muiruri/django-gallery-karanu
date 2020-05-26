@@ -1,4 +1,4 @@
-# Galleria
+# Django Gallery Application
 ### Developer
 Edwin Karanu Muiruri
 
