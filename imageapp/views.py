@@ -20,13 +20,10 @@ def image_search(request):
         searched_category = request.GET.get("category")
         searched_images = Image.search_image(searched_category)
         message = f"{searched_category}"
-
         return render(request, 'search.html', {"message":message, "searched_images": searched_images,"title": title})
-
-
-    else:
-        message = "Please input a category to be searched"
-        return render(request, 'search.html', {"message":message,"title": title})
+    # else:
+        # message = "No category matches {message}"
+        # return render(request, 'search.html', {"message":message,"title": title})
 
 def location_images(request,location):
     '''

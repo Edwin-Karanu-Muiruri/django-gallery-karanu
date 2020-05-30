@@ -2,9 +2,8 @@
 {% block content %}
 <div class="container-fluid">
     {% if searched_images %}
-    <h2 class="header"> Search categories</h2>
+    <h2 class="header"> Search for categories</h2>
     <h2 class="header-alt">{{ searched_images|length }} image(s) of the category {{message}} found</h2>
-
     <div class="images">
         <div class="image-list">
             {% for image in searched_images %}
@@ -12,12 +11,11 @@
                 <img class="image" src="{{image.image.url}}" style="width: 300px;height: 300px;">
             </div>
             {% endfor%}
-
         </div>
     </div>
-        {% else %}
-        <h2 class="header-alt">No images were found for this category </h2>
-        {% endif %}
+    {% else %}
+    <h2 class="header-alt">No images were found for this category </h2>
+    {% endif %}
 
 </div>
 {% endblock %}

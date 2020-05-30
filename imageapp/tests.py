@@ -23,7 +23,6 @@ class CategoryTestClass(TestCase):
         self.assertTrue(len(categories)> 0)
 
     def test_delete_category(self):
-        self.animals.save_category()
         categories1 = Category.objects.all()
         self.assertEqual(len(categories1),1)
         self.animals.delete_category()
@@ -33,7 +32,7 @@ class CategoryTestClass(TestCase):
     
     def test_update_category(self):
         self.animals.save_category()
-        self.animals.update_category(self.nature.id,'wildlife')
+        self.animals.update_category(self.animals.id,'wildlife')
         new_update = Category.objects.get(name = "wildlife")
         self.assertEqual(new_update.name, 'wildlife')
 
