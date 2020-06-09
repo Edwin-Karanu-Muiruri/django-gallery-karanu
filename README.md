@@ -21,6 +21,6 @@ To clone, users will require django, postgres, psycopg2, bootstrap4 and python3.
 Currently, there are no known bugs.
 
 ## Licence
-This project is copyrighted under the [MIT] licence
+This project is copyrighted under the [MIT](LICENSE) licence
 
 Copyright (c) 2020 **Edwin Karanu Muiruri**
